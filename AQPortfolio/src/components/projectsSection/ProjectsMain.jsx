@@ -9,7 +9,7 @@ const projects = [
     name2:"Gestion de ordenes, solicitudes y trabajos",
     year: "2025 in development",
     align: "right",
-    image: "../../public/images/gosyt.png",
+    image: "./images/gosyt.png",
     link: "#",
   },
   {
@@ -17,7 +17,7 @@ const projects = [
     name2:"Gestion de empleados",
     year: "Sept2024",
     align: "left",
-    image: "../../public/images/empleados.png",
+    image: "./images/empleados.png",
     link: "#",
   },
   
