@@ -13,7 +13,7 @@ const HeroPic = () => {
     >
       <img
         src="./images/stivenfelix.png"
-        alt="Stiven Šeliū"
+        alt="Stiven felix"
         className="max-h-[450px] w-auto"
       />
 

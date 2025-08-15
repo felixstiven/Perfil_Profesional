@@ -7,8 +7,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   //const [success, setSuccess] = useState("");
-  const serviceId = import.meta.env.VITE_SERVICE_ID;
-  const templateId = import.meta.env.VITE_TEMPLATE_ID;
+  // const serviceId = import.meta.env.VITE_SERVICE_ID;
+  // const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const handleName = (e) => {
     setName(e.target.value);
 };
@@ -23,7 +23,7 @@ const ContactForm = () => {
     e.preventDefault();
 
     try {
-      await emailjs.sendForm(serviceId, templateId, form.current, {
+      await emailjs.sendForm('service_buzoel9', "template_oai2qfh", form.current, {
         publicKey: "sR6WVtXv2corXYgo3",
       }).then(
         () => 
