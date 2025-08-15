@@ -3,7 +3,7 @@ const AboutMeImage = () => {
     <div className="h-[500px] w-[300px] relative">
       <div className="h-[500px] w-[300px] rounded-[100px] absolute overflow-hidden">
         <img
-          src="../../public/images/about-me.jpg"
+          src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzYXJyb2xsbyUyMGRlJTIwc29mdHdhcmV8ZW58MHx8MHx8fDA%3D"
           alt="About Me Image"
           className="h-full w-auto object-cover"
         />
