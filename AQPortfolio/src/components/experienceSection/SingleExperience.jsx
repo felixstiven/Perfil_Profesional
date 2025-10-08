@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import { fadeIn } from "../../framerMotion/variantsSwipe";
 import propTypes from "prop-types";
 
 const SingleExperience = ({ experience }) => {

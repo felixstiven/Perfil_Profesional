@@ -8,7 +8,7 @@ import { DiNodejs } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import { fadeIn } from "../../framerMotion/variantsSwipe";
 
 const skills = [
   {

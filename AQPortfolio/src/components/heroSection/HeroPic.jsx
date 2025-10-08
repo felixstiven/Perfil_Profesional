@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import { fadeIn } from "../../framerMotion/variantsSwipe";
 import { PiHexagonThin } from "react-icons/pi";
 
 const HeroPic = () => {

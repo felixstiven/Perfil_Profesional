@@ -9,7 +9,7 @@ import { FaReact } from "react-icons/fa";
 
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import { fadeIn } from "../../framerMotion/variantsSwipe";
 
 const skills = [
   {

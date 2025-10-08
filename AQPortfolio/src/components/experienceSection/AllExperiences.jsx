@@ -2,7 +2,7 @@ import React from "react";
 import SingleExperience from "./SingleExperience";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { fadeIn } from "../../framerMotion/variants";
+import { fadeIn } from "../../framerMotion/variantsSwipe";
 
 
 const experiences = [
