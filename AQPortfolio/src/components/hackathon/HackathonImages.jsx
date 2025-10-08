@@ -5,8 +5,8 @@ import { useRef } from "react";
 
 
 const imageData = [
-    "../../public/images/hackathon.jpeg",
-    "../../public/images/premio1.jpeg",
+    "../images/hackathon.jpeg",
+    "../images/premio1.jpeg",
 ]
 
 
