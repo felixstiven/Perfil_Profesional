@@ -2,11 +2,14 @@ import SingleSkill from "./SingleSkill";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
+import { FaPython } from "react-icons/fa6";
 import { SiTypescript } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { DiNodejs } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiMongodb } from "react-icons/si";
+import { FaDocker } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
 
@@ -22,6 +25,10 @@ const skills = [
   {
     skill: "JavaScript",
     icon: IoLogoJavascript,
+  },
+  {
+    skill: "Python",
+    icon: FaPython,
   },
   {
     skill: "TypeScript",
@@ -42,6 +49,14 @@ const skills = [
   {
     skill: "Expressjs",
     icon: SiExpress,
+  },
+  {
+    skill: "MongoDB",
+    icon: SiMongodb,
+  },
+  {
+    skill: "Docker",
+    icon: FaDocker,
   },
 ];
 

@@ -5,13 +5,13 @@ import { useRef } from "react";
 
 
 const imageData = [
-    "../images/hackathon.jpeg",
-    "../images/premio1.jpeg",
+  "../images/hackathon.jpeg",
+  "../images/premio1.jpeg",
 ]
 
 
 export default function HackathonImages() {
- const sliderRef = useRef(null);
+  const sliderRef = useRef(null);
 
   var settings = {
     dots: true,
@@ -26,9 +26,9 @@ export default function HackathonImages() {
   return (
     <>
       <div className=" mt-12 p-8 ">
-        <h1 className=" text-center text-4xl text-cyan mb-10 font-bold">HACKATHON CHALLENGER MASTER 2025</h1>
+        <h1 className=" text-center text-4xl text-cyan mb-10 font-bold">HACKATHON CHALLENGER MASTER 2024</h1>
       </div>
-       <div className="relative -mb-[100px] lg:w-[1100px] md:w-auto  m-auto flex items-center justify-center">
+      <div className="relative -mb-[100px] lg:w-[1100px] md:w-auto  m-auto flex items-center justify-center">
         <button
           aria-label="Anterior"
           className="absolute text-4xl  lg:left-[60px] md:left-[20px] max:left-1 top-1/2  w-10 h-10 rounded-full bg-darkOrange  shadow-md  hover:bg-orange text-white font-semibold"
@@ -54,6 +54,6 @@ export default function HackathonImages() {
         </button>
       </div>
     </>
-    
+
   );
 }

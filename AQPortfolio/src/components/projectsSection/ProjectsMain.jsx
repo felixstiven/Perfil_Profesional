@@ -6,21 +6,21 @@ import { fadeIn } from "../../framerMotion/variantsSwipe";
 const projects = [
   {
     name: "Gosyt",
-    name2:"Gestion de ordenes, solicitudes y trabajos",
+    name2: "Gestion de ordenes, solicitudes y trabajos",
     year: "2025 in development",
     align: "right",
     image: "./images/gosyt.png",
-    link: "#",
+    link: "https://github.com/felixstiven/RedConectada",
   },
   {
-    name: "Api Rest crud",
-    name2:"Gestion de empleados",
+    name: "Portafolio web",
+    name2: "Desarrollado con React",
     year: "Sept2024",
     align: "left",
-    image: "./images/empleados.png",
-    link: "#",
+    image: "./images/certificates/protfolio.png",
+    link: "https://perfilprofesional-production.up.railway.app/",
   },
-  
+
 ];
 
 const ProjectsMain = () => {
@@ -44,6 +44,7 @@ const ProjectsMain = () => {
               year={project.year}
               align={project.align}
               image={project.image}
+              link={project.link}
             />
           );
         })}

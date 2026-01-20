@@ -7,13 +7,12 @@ const ExperienceTopLeft = () => {
         Since 2024
       </p>
       <div className="flex justify-center items-center gap-4">
-        <ExperienceInfo number="1" text="Years" />
+        <ExperienceInfo number="6" text="Months" />
         <p className="font-bold text-6xl text-lightBrown">-</p>
-        <ExperienceInfo number="2" text="Websites" />
+        <ExperienceInfo number="2" text="Projects" />
       </div>
       <p className="text-center">
-        With 1 years of experience building dynamic and user-friendly web
-        applications.
+        With 6 months of experience building dynamic and easy-to-use web applications, the Gosyt platform under development (Order, request and job management) and my web portfolio.
       </p>
     </div>
   );
