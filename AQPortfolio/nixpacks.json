@@ -1,0 +1,22 @@
+{
+    "phases": {
+        "setup": {
+            "nixPkgs": [
+                "nodejs-20_x"
+            ]
+        },
+        "install": {
+            "cmds": [
+                "npm install --legacy-peer-deps"
+            ]
+        },
+        "build": {
+            "cmds": [
+                "npm run build"
+            ]
+        }
+    },
+    "start": {
+        "cmd": "npm run preview"
+    }
+}
