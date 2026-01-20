@@ -10,6 +10,7 @@ import { SiExpress } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { FaDocker } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
 
@@ -58,6 +59,7 @@ const skills = [
     skill: "Docker",
     icon: FaDocker,
   },
+
 ];
 
 const AllSkills = () => {

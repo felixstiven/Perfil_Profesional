@@ -1,13 +1,16 @@
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
+import { FaPython } from "react-icons/fa6";
 import { SiTypescript } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
-
-
+import { DiNodejs } from "react-icons/di";
+import { SiExpress } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiMongodb } from "react-icons/si";
+import { FaDocker } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
 
@@ -25,6 +28,10 @@ const skills = [
     icon: IoLogoJavascript,
   },
   {
+    skill: "Python",
+    icon: FaPython,
+  },
+  {
     skill: "TypeScript",
     icon: SiTypescript,
   },
@@ -33,16 +40,28 @@ const skills = [
     icon: FaReact,
   },
   {
-   skill: "TailwindCSS",
+    skill: "TailwindCSS",
     icon: RiTailwindCssFill,
   },
   {
-    skill: "Express",
+    skill: "Nodejs",
+    icon: DiNodejs,
+  },
+  {
+    skill: "Expressjs",
     icon: SiExpress,
   },
   {
-    skill: "Nodejs",
-    icon: FaNodeJs,
+    skill: "MongoDB",
+    icon: SiMongodb,
+  },
+  {
+    skill: "Docker",
+    icon: FaDocker,
+  },
+  {
+    skill: "Git",
+    icon: FaGithub,
   },
 ];
 
