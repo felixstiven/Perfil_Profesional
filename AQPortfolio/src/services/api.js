@@ -8,6 +8,7 @@
 import { log, logError, handleApiError } from '../utils/security';
 
 // URL base del backend (configurable por entorno)
+//url
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 // Timeout para peticiones (30 segundos)
