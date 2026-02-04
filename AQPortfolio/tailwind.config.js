@@ -34,6 +34,9 @@ export default {
       cyan: "#15d1e9",
       lightCyan: "#88e5f0",
       darkCyan: "#009fb3",
+      magenta: "#940253",
+      lightMagenta: "#b8036a",
+      darkMagenta: "#6b0140",
       orange: "#fb9718",
       lightOrange: "#fac27b",
       darkOrange: "#d28422",
@@ -49,11 +52,22 @@ export default {
         orangeBigShadow: "10px 10px 10000px 500px rgba(240, 169, 79, 0.3)",
         orangeMediumShadow: "10px 10px 2000px 150px rgba(240, 169, 79, 0.5)",
       },
+      animation: {
+        fadeIn: 'fadeIn 0.3s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
     },
     fontFamily: {
       body: ["Josefin Sans"],
       special: ['"Nunito"'],
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

@@ -3,8 +3,29 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
-  background-color: #3c2f2f; /* Replace with the actual color value for bg-darkBrown */
+  background-color: #3c2f2f;
+  /* Replace with the actual color value for bg-darkBrown */
+}
+
+/* Custom Scrollbar Styles for Chat */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #1f2937;
+  /* gray-800 */
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(21, 209, 233, 0.5);
+  /* cyan with 50% opacity */
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 209, 233, 0.8);
+  /* cyan with 80% opacity */
 }

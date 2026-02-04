@@ -10,6 +10,7 @@ import ProjectsMain from "./components/projectsSection/ProjectsMain";
 import SkillsMain from "./components/skillsSection/SkillsMain";
 import SubSkills from "./components/skillsSection/SubSkills";
 import SubHeroMain from "./components/subHeroSection/SubHeroMain";
+import ChatWindow from "./components/agenteIa/chatWindow";
 
 function App() {
   return (
@@ -23,9 +24,12 @@ function App() {
       <SubSkills />
       <ExperienceMain />
       <ProjectsMain />
-      <HackathonImages/>
+      <HackathonImages />
       <ContactMeMain />
       <FooterMain />
+
+      {/* Chat Inteligente - Posicionado con fixed en esquina inferior derecha */}
+      <ChatWindow />
     </main>
   );
 }
