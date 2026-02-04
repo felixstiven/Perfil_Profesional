@@ -12,7 +12,7 @@ import LeadForm from "./LeadForm";
 import { sendMessage, deleteSession } from "../../services/api";
 import { log, sanitizeHtml, isValidSessionId } from "../../utils/security";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = 'https://gemini-chat-backend-bhjk.onrender.com'
 
 export default function ChatWindow() {
     //ESTADO
@@ -174,9 +174,16 @@ export default function ChatWindow() {
             */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-cyan via-magenta to-magenta 
+                className="fixed 
+                           /* Mobile: Botón más pequeño, esquina inferior derecha */
+                           bottom-4 right-4 w-14 h-14
+                           /* Desktop: Botón más grande */
+                           sm:bottom-6 sm:right-6 sm:w-16 sm:h-16
+                           /* Estilos comunes */
+                           z-50 bg-gradient-to-br from-cyan via-magenta to-magenta 
                            rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 
-                           flex items-center justify-center text-3xl animate-pulse hover:animate-none"
+                           flex items-center justify-center text-2xl sm:text-3xl 
+                           animate-pulse hover:animate-none"
                 title={isOpen ? "Cerrar chat" : "Abrir chat con Stiven Felix"}
             >
                 {isOpen ? '✕' : '💬'}
@@ -196,8 +203,16 @@ export default function ChatWindow() {
                 - transform transition-all: Animaciones suaves
                 - ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}: Animación de entrada/salida
             */}
-            <div className={`fixed bottom-24 right-6 w-96 h-[600px] bg-gray-900/95 backdrop-blur-xl 
-                            rounded-2xl shadow-2xl border-2 border-cyan/30 flex flex-col overflow-hidden
+            <div className={`fixed 
+                            /* Mobile: Pantalla completa */
+                            inset-0 rounded-none
+                            /* Tablet (sm: 640px+): Ventana flotante pequeña */
+                            sm:inset-auto sm:bottom-20 sm:right-4 sm:w-80 sm:h-[500px] sm:rounded-2xl
+                            /* Desktop (lg: 1024px+): Ventana flotante grande */
+                            lg:bottom-24 lg:right-6 lg:w-96 lg:h-[600px]
+                            /* Estilos comunes */
+                            bg-gray-900/95 backdrop-blur-xl shadow-2xl border-2 border-cyan/30 
+                            flex flex-col overflow-hidden
                             transform transition-all duration-300 z-40
                             ${isOpen ? 'scale-100 opacity-100' : 'scale-0 opacity-0 pointer-events-none'}`}>
 
@@ -208,12 +223,12 @@ export default function ChatWindow() {
                     - p-4: Padding de 16px
                     - flex justify-between: Flexbox con espacio entre elementos
                 */}
-                <div className="bg-gradient-to-r from-cyan to-magenta p-4 flex justify-between items-center">
-                    <div className="flex items-center gap-3">
-                        <span className="text-3xl">🤖</span>
+                <div className="bg-gradient-to-r from-cyan to-magenta p-3 sm:p-4 flex justify-between items-center">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                        <span className="text-2xl sm:text-3xl">🤖</span>
                         <div>
-                            <h1 className="text-white font-bold text-lg">Stiven Felix AI</h1>
-                            <p className="text-white/80 text-xs">Desarrollador Full-Stack</p>
+                            <h1 className="text-white font-bold text-base sm:text-lg">Stiven Felix AI</h1>
+                            <p className="text-white/80 text-xs hidden sm:block">Desarrollador Full-Stack</p>
                         </div>
                     </div>
                     <div className="flex gap-2">
@@ -253,7 +268,7 @@ export default function ChatWindow() {
                     - space-y-4: Espacio vertical de 16px entre mensajes
                     - Custom scrollbar: Scrollbar estilizado con Tailwind
                 */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-4 
+                <div className="flex-1 overflow-y-auto p-3 sm:p-4 space-y-3 sm:space-y-4 
                                scrollbar-thin scrollbar-thumb-cyan/50 scrollbar-track-gray-800">
                     {messages.map((msg) => (
                         <ChatMessage
