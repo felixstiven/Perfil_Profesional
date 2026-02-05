@@ -3,19 +3,19 @@ import { Link } from "react-scroll";
 const FooterMain = () => {
   const footerLinks = [
     {
-      name: "About Me",
+      name: "Sobre Mí",
       section: "about",
     },
     {
-      name: "Skills",
+      name: "Habilidades",
       section: "skills",
     },
     {
-      name: "Experience",
+      name: "Experiencia",
       section: "experience",
     },
     {
-      name: "Projects",
+      name: "Proyectos",
       section: "projects",
     },
   ];
@@ -44,7 +44,7 @@ const FooterMain = () => {
         </ul>
       </div>
       <p className="max-w-[1200px] mx-auto text-right mt-2 mb-12 text-sm text-lightBrown">
-        © 2024 Stiven Felix | All Rights Reserved.
+        © 2024 Stiven Felix | Todos los Derechos Reservados.
       </p>
     </div>
   );

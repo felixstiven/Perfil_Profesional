@@ -1,11 +1,11 @@
 import { Link } from "react-scroll";
 
 const links = [
-  { link: "About Me", section: "about" },
-  { link: "Skills", section: "skills" },
-  { link: "Experience", section: "experience" },
-  { link: "Projects", section: "projects" },
-  { link: "Contact", section: "contact" },
+  { link: "Sobre Mí", section: "about" },
+  { link: "Habilidades", section: "skills" },
+  { link: "Experiencia", section: "experience" },
+  { link: "Proyectos", section: "projects" },
+  { link: "Contacto", section: "contact" },
 ];
 
 const NavbarLinks = () => {

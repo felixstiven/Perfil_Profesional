@@ -11,7 +11,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="lg:text-2xl sm:text-xl  uppercase text-lightGrey "
       >
-        Full - Stack Web Developer
+        Desarrollador Full - Stack
       </motion.h2>
       <motion.h1
         variants={fadeIn("left", 0.4)}
@@ -30,7 +30,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="text-lg mt-4"
       >
-        A Passionate Web Developer
+        Un Desarrollador Web Apasionado
       </motion.p>
     </div>
   );

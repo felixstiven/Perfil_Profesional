@@ -1,4 +1,6 @@
 node_modules
+<<<<<<< HEAD
+=======
 dist
 dist-ssr
 *.local
@@ -14,3 +16,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+>>>>>>> b7f899f (updating web application profile)

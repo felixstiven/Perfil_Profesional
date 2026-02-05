@@ -205,11 +205,11 @@ export default function ChatWindow() {
             */}
             <div className={`fixed 
                             /* Mobile: Pantalla completa */
-                            inset-0 rounded-none
+                            inset-0 rounded-none h-screen
                             /* Tablet (sm: 640px+): Ventana flotante pequeña */
-                            sm:inset-auto sm:bottom-20 sm:right-4 sm:w-80 sm:h-[500px] sm:rounded-2xl
+                            sm:inset-auto sm:bottom-20 sm:right-4 sm:w-80 sm:max-h-[80vh] sm:min-h-[400px] sm:rounded-2xl
                             /* Desktop (lg: 1024px+): Ventana flotante grande */
-                            lg:bottom-24 lg:right-6 lg:w-96 lg:h-[600px]
+                            lg:bottom-20 lg:right-6 lg:w-96 lg:max-h-[85vh] lg:min-h-[500px]
                             /* Estilos comunes */
                             bg-gray-900/95 backdrop-blur-xl shadow-2xl border-2 border-cyan/30 
                             flex flex-col overflow-hidden

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import CertificateCard from "./CertificateCard";
-import CertificateModal from "./CertificateModal";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
 
@@ -92,7 +91,7 @@ const AllExperiences = () => {
           viewport={{ once: false, amount: 0.7 }}
           className="text-6xl text-cyan mb-10 font-bold"
         >
-          Certifications
+          Certificaciones
         </motion.h2>
       </div>
 
@@ -108,13 +107,7 @@ const AllExperiences = () => {
         ))}
       </div>
 
-      {/* Certificate Modal */}
-      {selectedCertificate && (
-        <CertificateModal
-          certificate={selectedCertificate}
-          onClose={handleCloseModal}
-        />
-      )}
+
     </>
   );
 };

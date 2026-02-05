@@ -11,7 +11,7 @@ const ContactForm = () => {
   // const templateId = import.meta.env.VITE_TEMPLATE_ID;
   const handleName = (e) => {
     setName(e.target.value);
-};
+  };
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -26,13 +26,13 @@ const ContactForm = () => {
       await emailjs.sendForm('service_buzoel9', "template_oai2qfh", form.current, {
         publicKey: "sR6WVtXv2corXYgo3",
       }).then(
-        () => 
+        () =>
           setEmail(""),
-          setName(""),
-          setMessage(""),
-          Swal.fire({
-          title: "Success!",
-          text: "Message Sent Successfully",
+        setName(""),
+        setMessage(""),
+        Swal.fire({
+          title: "¡Éxito!",
+          text: "Mensaje Enviado Exitosamente",
           icon: "success",
         }),
         (error) => {
@@ -42,17 +42,17 @@ const ContactForm = () => {
     } catch (error) {
       console.log("FAILED...", error.text);
     }
- 
+
   };
 
   return (
     <div>
-      <p className="text-cyan">{}</p>
+      <p className="text-cyan">{ }</p>
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
         <input
           type="text"
           name="from_name"
-          placeholder="Your Name"
+          placeholder="Tu Nombre"
           required
           className="h-12 rounded-lg bg-lightBrown px-2"
           value={name}
@@ -61,7 +61,7 @@ const ContactForm = () => {
         <input
           type="email"
           name="from_email"
-          placeholder="Your Email"
+          placeholder="Tu Correo"
           required
           className="h-12 rounded-lg bg-lightBrown px-2"
           value={email}
@@ -72,7 +72,7 @@ const ContactForm = () => {
           name="message"
           rows="9"
           cols="50"
-          placeholder="Message"
+          placeholder="Mensaje"
           required
           className=" rounded-lg bg-lightBrown p-2"
           value={message}
@@ -82,7 +82,7 @@ const ContactForm = () => {
           type="submit"
           className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500"
         >
-          Send
+          Enviar
         </button>
       </form>
     </div>
