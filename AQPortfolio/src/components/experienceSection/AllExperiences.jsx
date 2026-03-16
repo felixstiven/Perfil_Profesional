@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import CertificateCard from "./CertificateCard";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
@@ -68,6 +68,14 @@ const certificates = [
     date: "2024-10-23",
     image: "/images/certificates/powerbi.png",
   },
+  {
+    id: 9,
+    title: "Desarollo con IA",
+    institution: "BIG SCHOOL",
+    date: "2026-03-13",
+    image: "/images/certificates/desarollo-ia.png", 
+
+  }
 ];
 
 const AllExperiences = () => {

@@ -1,43 +1,26 @@
-/**
- * 🛡️ UTILIDADES DE SEGURIDAD
- * 
- * Este archivo contiene funciones de seguridad para proteger
- * la aplicación de vulnerabilidades comunes.
- */
-
-/**
- * 🔍 Logging Condicional
- * 
- * Solo muestra logs en desarrollo, no en producción.
- * Esto evita exponer información sensible.
- * 
- * @param {...any} args - Argumentos a loggear
- */
+// 🛡️ UTILIDADES DE SEGURIDAD
+// Este archivo contiene funciones de seguridad para proteger
+// la aplicación de vulnerabilidades comunes.
+//@param {...any} args - Argumentos a loggear
 export const log = (...args) => {
     if (import.meta.env.DEV) {
         console.log(...args);
     }
 };
 
+// 🚨 Log de errores
+//@param {...any} args - Argumentos a loggear
 export const logError = (...args) => {
     if (import.meta.env.DEV) {
         console.error(...args);
     }
 };
 
-/**
- * 🧹 Sanitizar HTML
- * 
- * Escapa caracteres HTML para prevenir XSS (Cross-Site Scripting).
- * Convierte caracteres especiales en entidades HTML.
- * 
- * Ejemplo:
- * sanitizeHtml("<script>alert('XSS')</script>")
- * // Retorna: "&lt;script&gt;alert('XSS')&lt;/script&gt;"
- * 
- * @param {string} text - Texto a sanitizar
- * @returns {string} Texto sanitizado
- */
+// 🧹 Sanitizar HTML
+// Escapa caracteres HTML para prevenir XSS (Cross-Site Scripting).
+// Convierte caracteres especiales en entidades HTML.
+//@param {string} text - Texto a sanitizar
+//@returns {string} Texto sanitizado
 export const sanitizeHtml = (text) => {
     if (!text) return '';
 
@@ -46,17 +29,12 @@ export const sanitizeHtml = (text) => {
     return div.innerHTML;
 };
 
-/**
- * ✅ Validar Session ID
- * 
- * Verifica que el session_id sea un UUID válido.
- * Esto previene inyección de código malicioso.
- * 
- * Formato UUID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
- * 
- * @param {string} id - Session ID a validar
- * @returns {boolean} true si es válido, false si no
- */
+// ✅ Validar Session ID
+// Verifica que el session_id sea un UUID válido.
+// Esto previene inyección de código malicioso.
+//@param {string} id - Session ID a validar
+//@returns {boolean} true si es válido, false si no
+
 export const isValidSessionId = (id) => {
     if (!id || typeof id !== 'string') return false;
 
@@ -65,15 +43,10 @@ export const isValidSessionId = (id) => {
     return uuidRegex.test(id);
 };
 
-/**
- * 🚨 Manejar Errores de API
- * 
- * Convierte errores técnicos en mensajes amigables para el usuario.
- * En producción, NO expone detalles técnicos.
- * 
- * @param {Error} error - Error capturado
- * @returns {string} Mensaje amigable para el usuario
- */
+// 🚨 Manejar Errores de API
+//@param {Error} error - Error capturado
+//@returns {string} Mensaje amigable para el usuario
+
 export const handleApiError = (error) => {
     // En desarrollo, mostrar error completo
     if (import.meta.env.DEV) {
@@ -106,28 +79,22 @@ export const handleApiError = (error) => {
     return 'Ocurrió un error inesperado. Por favor, intenta de nuevo.';
 };
 
-/**
- * ✂️ Limitar Longitud de Texto
- * 
- * Previene ataques de buffer overflow y spam.
- * 
- * @param {string} text - Texto a limitar
- * @param {number} maxLength - Longitud máxima
- * @returns {string} Texto limitado
- */
+
+//limitar longitud de texto
+//@param {string} text - Texto a limitar
+//@param {number} maxLength - Longitud máxima
+// @returns {string} Texto limitado
+
 export const limitLength = (text, maxLength) => {
     if (!text) return '';
     return text.slice(0, maxLength);
 };
 
-/**
- * 📧 Validar Email
- * 
- * Valida formato de email de forma más estricta.
- * 
- * @param {string} email - Email a validar
- * @returns {boolean} true si es válido
- */
+// 📧 Validar Email
+// Valida formato de email de forma más estricta.
+//@param {string} email - Email a validar
+//@returns {boolean} true si es válido
+
 export const isValidEmail = (email) => {
     if (!email || typeof email !== 'string') return false;
 
@@ -141,14 +108,10 @@ export const isValidEmail = (email) => {
     return emailRegex.test(email);
 };
 
-/**
- * 📱 Validar Teléfono
- * 
- * Valida que el teléfono solo contenga números y tenga 10 dígitos.
- * 
- * @param {string} phone - Teléfono a validar
- * @returns {boolean} true si es válido
- */
+// 📱 Validar Teléfono
+// Valida que el teléfono solo contenga números y tenga 10 dígitos.
+//@param {string} phone - Teléfono a validar
+//@returns {boolean} true si es válido
 export const isValidPhone = (phone) => {
     if (!phone || typeof phone !== 'string') return false;
 
@@ -157,15 +120,12 @@ export const isValidPhone = (phone) => {
     return phoneRegex.test(phone);
 };
 
-/**
- * 👤 Validar Nombre
- * 
- * Valida que el nombre solo contenga letras, espacios, guiones y apóstrofes.
- * Previene inyección de código.
- * 
- * @param {string} name - Nombre a validar
- * @returns {object} { valid: boolean, error: string|null }
- */
+// 👤 Validar Nombre
+// Valida que el nombre solo contenga letras, espacios, guiones y apóstrofes.
+// Previene inyección de código.
+//@param {string} name - Nombre a validar
+//@returns {object} { valid: boolean, error: string|null }
+
 export const validateName = (name) => {
     if (!name || typeof name !== 'string') {
         return { valid: false, error: 'El nombre es requerido' };
@@ -191,14 +151,11 @@ export const validateName = (name) => {
     return { valid: true, error: null };
 };
 
-/**
- * 🏢 Validar Nombre de Empresa
- * 
- * Similar a validar nombre, pero permite números y algunos caracteres especiales.
- * 
- * @param {string} company - Nombre de empresa a validar
- * @returns {object} { valid: boolean, error: string|null }
- */
+// 🏢 Validar Nombre de Empresa
+// Similar a validar nombre, pero permite números y algunos caracteres especiales.
+//@param {string} company - Nombre de empresa a validar
+//@returns {object} { valid: boolean, error: string|null }
+
 export const validateCompany = (company) => {
     if (!company || typeof company !== 'string') {
         return { valid: false, error: 'El nombre de la empresa es requerido' };
@@ -224,14 +181,11 @@ export const validateCompany = (company) => {
     return { valid: true, error: null };
 };
 
-/**
- * 💬 Validar Mensaje
- * 
- * Valida longitud del mensaje y previene spam.
- * 
- * @param {string} message - Mensaje a validar
- * @returns {object} { valid: boolean, error: string|null }
- */
+// 💬 Validar Mensaje
+// Valida longitud del mensaje y previene spam.
+//@param {string} message - Mensaje a validar
+//@returns {object} { valid: boolean, error: string|null }
+
 export const validateMessage = (message) => {
     if (!message || typeof message !== 'string') {
         return { valid: false, error: 'El mensaje es requerido' };
