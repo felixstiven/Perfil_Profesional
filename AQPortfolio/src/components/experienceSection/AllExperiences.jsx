@@ -74,7 +74,7 @@ const certificates = [
     title: "Desarollo con IA",
     institution: "BIG SCHOOL",
     date: "2026-03-13",
-    image: "/images/desarollo-ia.png", 
+    image: "/images/certificates/desarollo-ia.png", 
 
   }
 ];
