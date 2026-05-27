@@ -19,6 +19,9 @@ const CertificateCard = ({ certificate, onClick, index }) => {
                 <img
                     src={certificate.image}
                     alt={certificate.title}
+                    width={400}
+                    height={300}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 {/* Overlay on hover */}

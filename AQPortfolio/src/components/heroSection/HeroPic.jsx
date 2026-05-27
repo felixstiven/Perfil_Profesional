@@ -13,8 +13,11 @@ const HeroPic = () => {
     >
       <div className="relative z-10 w-[380px] h-[380px] rounded-full overflow-hidden border-2 border-cyan/20">
         <img
-          src="./images/stivenfelix.png"
+          src="/images/stivenfelix.png"
           alt="Stiven felix"
+          width={380}
+          height={380}
+          fetchPriority="high"
           className="w-full h-full object-contain"
         />
       </div>
