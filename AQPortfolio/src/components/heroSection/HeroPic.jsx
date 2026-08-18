@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
-import { PiHexagonThin } from "react-icons/pi";
 
 const HeroPic = () => {
   return (
@@ -9,21 +8,19 @@ const HeroPic = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0 }}
-      className=" h-full flex items-center justify-center  "
+      className="h-full flex items-center justify-center my-6 md:my-0"
     >
-      <div className="relative z-10 w-[380px] h-[380px] rounded-full overflow-hidden border-2 border-cyan/20">
-        <img
-          src="/images/stivenfelix.png"
-          alt="Stiven felix"
-          width={380}
-          height={380}
-          fetchPriority="high"
-          className="w-full h-full object-contain"
-        />
-      </div>
-
-      <div className=" absolute -z-10 flex justify-center items-center animate-pulse ">
-        <PiHexagonThin className=" md:h-[90%] sm:h-[120%] min-h-[600px] w-auto text-darkCyan blur-md animate-[spin_20s_linear_infinite] " />
+      <div className="relative z-10 w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full p-2 bg-gradient-to-tr from-[#00A797] via-[#00C8C8] to-slate-200 shadow-xl">
+        <div className="w-full h-full rounded-full overflow-hidden bg-white">
+          <img
+            src="/images/stivenfelix.png"
+            alt="Stiven Felix"
+            width={380}
+            height={380}
+            fetchPriority="high"
+            className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+          />
+        </div>
       </div>
     </motion.div>
   );

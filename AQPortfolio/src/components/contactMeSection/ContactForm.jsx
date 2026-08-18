@@ -1,88 +1,104 @@
 import { useRef, useState } from "react";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
+import { FiSend } from "react-icons/fi";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  //const [success, setSuccess] = useState("");
-  // const serviceId = import.meta.env.VITE_SERVICE_ID;
-  // const templateId = import.meta.env.VITE_TEMPLATE_ID;
-  const handleName = (e) => {
-    setName(e.target.value);
-};
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-  const handleMessage = (e) => {
-    setMessage(e.target.value);
-  };
+  const [loading, setLoading] = useState(false);
   const form = useRef();
+
   const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       await emailjs.sendForm('service_buzoel9', "template_oai2qfh", form.current, {
         publicKey: "sR6WVtXv2corXYgo3",
-      }).then(
-        () => 
-          setEmail(""),
-          setName(""),
-          setMessage(""),
-          Swal.fire({
-          title: "Success!",
-          text: "Message Sent Successfully",
-          icon: "success",
-        }),
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+      });
+
+      setEmail("");
+      setName("");
+      setMessage("");
+
+      Swal.fire({
+        title: "¡Mensaje Enviado!",
+        text: "Tu mensaje ha sido recibido con éxito. Te responderé muy pronto.",
+        icon: "success",
+        background: "#FFFFFF",
+        color: "#0A192F",
+        confirmButtonColor: "#00A797",
+      });
     } catch (error) {
-      console.log("FAILED...", error.text);
+      console.error("FAILED...", error);
+      Swal.fire({
+        title: "Error de envío",
+        text: "Ocurrió un problema al enviar el correo. Puedes escribirme por WhatsApp.",
+        icon: "error",
+        background: "#FFFFFF",
+        color: "#0A192F",
+        confirmButtonColor: "#00A797",
+      });
+    } finally {
+      setLoading(false);
     }
- 
   };
 
   return (
-    <div>
-      <p className="text-cyan">{}</p>
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
-        <input
-          type="text"
-          name="from_name"
-          placeholder="Your Name"
-          required
-          className="h-12 rounded-lg bg-lightBrown px-2"
-          value={name}
-          onChange={handleName}
-        />
-        <input
-          type="email"
-          name="from_email"
-          placeholder="Your Email"
-          required
-          className="h-12 rounded-lg bg-lightBrown px-2"
-          value={email}
-          onChange={handleEmail}
-        />
-        <textarea
-          type="text"
-          name="message"
-          rows="9"
-          cols="50"
-          placeholder="Message"
-          required
-          className=" rounded-lg bg-lightBrown p-2"
-          value={message}
-          onChange={handleMessage}
-        />
+    <div className="light-card p-6 rounded-2xl border border-slate-200">
+      <div className="flex items-center gap-2 mb-4 text-[#00A797]">
+        <FiSend className="text-xl" />
+        <h3 className="text-lg font-display font-bold text-[#0A192F]">Enviar Mensaje por Gmail</h3>
+      </div>
+
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">
+        <div>
+          <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Nombre Completo</label>
+          <input
+            type="text"
+            name="from_name"
+            placeholder="Tu nombre o empresa"
+            required
+            className="w-full h-10 rounded-xl bg-slate-50 border border-slate-200 px-3 text-sm text-slate-800 focus:border-[#00A797] outline-none transition-colors placeholder:text-slate-400"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Correo Electrónico</label>
+          <input
+            type="email"
+            name="from_email"
+            placeholder="tu@correo.com"
+            required
+            className="w-full h-10 rounded-xl bg-slate-50 border border-slate-200 px-3 text-sm text-slate-800 focus:border-[#00A797] outline-none transition-colors placeholder:text-slate-400"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+        <div>
+          <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Mensaje Breve</label>
+          <textarea
+            name="message"
+            rows="3"
+            placeholder="Detalles sobre el proyecto o vacante..."
+            required
+            className="w-full rounded-xl bg-slate-50 border border-slate-200 p-3 text-sm text-slate-800 focus:border-[#00A797] outline-none transition-colors placeholder:text-slate-400 resize-none"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+        </div>
+
         <button
           type="submit"
-          className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500"
+          disabled={loading}
+          className="btn-gosyt-primary w-full rounded-xl py-2.5 font-bold text-sm flex items-center justify-center gap-2 mt-1 cursor-pointer disabled:opacity-50"
         >
-          Send
+          {loading ? "Enviando..." : "Enviar Correo Directo"}
         </button>
       </form>
     </div>
