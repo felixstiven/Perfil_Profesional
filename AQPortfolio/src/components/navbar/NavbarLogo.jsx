@@ -10,7 +10,7 @@ const NavbarLogo = () => {
         </h1>
         <div className="hidden sm:flex items-center gap-1.5 text-[10px] md:text-xs text-[#00A797] font-mono font-medium">
           <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
-          <span>Systems Architect</span>
+          <span>Full Stack Developer</span>
         </div>
       </div>
     </div>

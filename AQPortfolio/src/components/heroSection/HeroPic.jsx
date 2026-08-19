@@ -17,7 +17,6 @@ const HeroPic = () => {
             alt="Stiven Felix"
             width={380}
             height={380}
-            fetchPriority="high"
             className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
           />
         </div>

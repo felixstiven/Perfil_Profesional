@@ -3,8 +3,8 @@ import { FaBriefcase, FaTimes, FaCalendarAlt, FaBuilding, FaCheck } from "react-
 
 const experiences = [
   {
-    role: "Full Stack Developer & Systems Architect",
-    company: "Proyecto GOSYT (Sistema Enterprise)",
+    role: "Full Stack Developer (Lead Developer)",
+    company: "Proyecto GOSYT (Plataforma SaaS & Real-Time)",
     period: "2025 – Presente",
     responsibilities: [
       "Diseño de arquitectura de microservicios con Node.js, Express y TypeScript.",

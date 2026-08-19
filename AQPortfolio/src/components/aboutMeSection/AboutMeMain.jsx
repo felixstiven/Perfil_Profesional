@@ -45,7 +45,7 @@ const AboutMeMain = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-display font-bold text-[#0A192F]">Sobre Stiven Felix Alvis</h3>
-                  <p className="text-xs text-[#00A797] font-mono">Full Stack & Systems Architect</p>
+                  <p className="text-xs text-[#00A797] font-mono">Full Stack Developer | Entornos Reales & IA</p>
                 </div>
               </div>
               <button
@@ -67,7 +67,7 @@ const AboutMeMain = () => {
                   Enfoque en GOSYT & Arquitectura Real-Time
                 </h4>
                 <p className="text-xs text-slate-600">
-                  Lidero el diseño e implementación de <strong>GOSYT</strong>, una plataforma síncrona en tiempo real utilizando WebSockets (Socket.io), Nginx como proxy inverso unificado, Docker en servidor de staging local ("La Torre") y arquitectura de base de datos híbrida (PostgreSQL + MongoDB).
+                  Lidero el diseño e implementación de <strong>GOSYT</strong>, una plataforma síncrona en tiempo real utilizando WebSockets (Socket.io), Nginx como proxy inverso unificado, Docker en servidor de staging local (`La Torre`) y arquitectura de base de datos híbrida (PostgreSQL + MongoDB).
                 </p>
               </div>
 
@@ -76,7 +76,7 @@ const AboutMeMain = () => {
                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm">
                   <li className="flex items-center gap-2">
                     <FaCheckCircle className="text-[#00A797]" />
-                    <span>Entender el "por qué" antes de codificar</span>
+                    <span>Entender el `por qué ` y la lógica detrás de cada línea</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <FaCheckCircle className="text-[#00A797]" />
@@ -84,11 +84,11 @@ const AboutMeMain = () => {
                   </li>
                   <li className="flex items-center gap-2">
                     <FaCheckCircle className="text-[#00A797]" />
-                    <span>Optimización de consumo de memoria y CPU</span>
+                    <span>Optimización de arquitectura, latencia y memoria</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <FaCheckCircle className="text-[#00A797]" />
-                    <span>Uso responsable y fundamentado de IA</span>
+                    <span>Construcción con IA: guiando la arquitectura con instrucciones técnicas precisas</span>
                   </li>
                 </ul>
               </div>

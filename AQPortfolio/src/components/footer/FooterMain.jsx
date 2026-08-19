@@ -23,7 +23,7 @@ const FooterMain = () => {
             Stiven Felix Alvis
           </h3>
           <p className="text-xs text-slate-500 mt-1 font-mono">
-            Full Stack & Systems Architect | GOSYT Ecosystem
+            Full Stack Developer | GOSYT Ecosystem
           </p>
         </div>
 
