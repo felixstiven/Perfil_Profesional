@@ -18,7 +18,7 @@ const HeroText = () => {
       >
         <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse"></span>
         <span className="text-xs font-mono font-semibold text-[#00A797]">
-          Staging Server 'La Torre' Active & Online
+          Staging Server  &apos;La Torre&apos; Active & Online
         </span>
       </motion.div>
 
