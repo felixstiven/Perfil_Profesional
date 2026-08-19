@@ -1,29 +1,15 @@
-import { Link } from "react-scroll";
-
 const AboutMeText = () => {
   return (
-    <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center ">
-      <h2 className="text-6xl text-cyan mb-10">Sobre Mí</h2>
-      <p>
-        Soy Stiven, Desarrollador Full Stack Junior apasionado por el código limpio y la innovación. Me especializo en Node.js para el backend y React.js + TypeScript para el frontend, construyendo soluciones con arquitectura sólida y mantenible.
-
-        <br /> Actualmente estudio Desarrollo de Software en SENA y fortalezco mi práctica diaria con proyectos como GOSYT y un portfolio con agente de IA. Estoy profundizando en contenedorización con Docker y en el mundo de la Inteligencia Artificial aplicada al desarrollo web, explorando LLM Agents, Prompt Engineering y Machine Learning para crear sistemas inteligentes y escalables.
-
-        <br /> Mi filosofía: no copiar y pegar, sino entender el “por qué” detrás de cada solución, optimizando procesos con IA y asegurando calidad y mantenibilidad en cada línea de código.
-
+    <div className="flex flex-col gap-4">
+      <h2 className="text-[#0A192F] text-2xl md:text-3xl font-display font-bold">
+        Ingeniería de Software & Arquitectura Distribuida
+      </h2>
+      <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+        Desarrollador Full Stack con formación tecnológica en el SENA y apasionado por construir sistemas confiables, eficientes y escalables. Me especializo en la integración de arquitecturas en tiempo real con WebSockets (Socket.io), containerización con Docker y optimización de infraestructura híbrida.
       </p>
-      <button className="border border-orange rounded-full py-2 px-4 text-lg flex gap-2 items-center mt-10 hover:bg-orange transition-all duration-500 cursor-pointer md:self-start sm:self-center">
-        <Link
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-120}
-          to="projects"
-          className="cursor-pointer text-white hover:text-cyan transition-all duration-500"
-        >
-          Mis Proyectos
-        </Link>
-      </button>
+      <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+        Lideré el desarrollo del ecosistema <strong className="text-[#0A192F]">GOSYT</strong>, una plataforma SaaS orientada a la gestión inteligente de datos y operabilidad en staging local y la nube.
+      </p>
     </div>
   );
 };
