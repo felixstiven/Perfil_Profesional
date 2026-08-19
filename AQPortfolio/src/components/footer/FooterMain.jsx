@@ -8,7 +8,8 @@ const FooterMain = () => {
     { name: "Experiencia", section: "experience" },
     { name: "Certificados", section: "certificates" },
     { name: "Proyectos", section: "projects" },
-    { name: "Contacto", section: "contact" },
+    { name: "Contacto", section: "contact" },   
+    
   ];
 
   return (
