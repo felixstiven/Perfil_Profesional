@@ -63,12 +63,32 @@ const SingleProject = ({ project }) => {
         </div>
       </div>
 
-      <div className="w-full lg:w-[420px] h-[240px] md:h-[280px] rounded-xl overflow-hidden border border-slate-200 shadow-md relative group shrink-0 bg-slate-100">
-        <img
-          src={project.image}
-          alt={project.name}
-          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-        />
+      {/* Frame de Navegador Profesional (Browser Mockup Completo) */}
+      <div className="w-full lg:w-[500px] rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-xl group shrink-0 flex flex-col transition-all duration-300 hover:shadow-2xl hover:border-[#00A797]/50">
+        {/* Barra de Navegación del Browser (Estilo macOS) */}
+        <div className="bg-slate-100/90 border-b border-slate-200 px-3.5 py-2 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56] border border-red-500/20"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E] border border-yellow-500/20"></span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F] border border-green-500/20"></span>
+          </div>
+
+          <div className="px-3 py-0.5 rounded-md bg-white border border-slate-200 text-[11px] font-mono text-slate-500 truncate max-w-[210px] flex items-center justify-center gap-1">
+            <span className="text-[#10B981]">https://</span>
+            <span>{project.name.includes("GOSYT") ? "gosyt.app/dashboard" : "stivenfelix.dev"}</span>
+          </div>
+
+          <div className="w-8"></div>
+        </div>
+
+        {/* Contenedor de Imagen Ajustado al 100% (Sin Recortes) */}
+        <div className="w-full aspect-[16/10] overflow-hidden bg-[#F8FAFC] p-2 flex items-center justify-center relative">
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full h-full object-contain rounded-md group-hover:scale-[1.02] transition-transform duration-500"
+          />
+        </div>
       </div>
     </motion.div>
   );

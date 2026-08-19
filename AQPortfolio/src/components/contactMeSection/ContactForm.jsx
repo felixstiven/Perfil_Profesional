@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 import { FiSend } from "react-icons/fi";
@@ -8,16 +8,27 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const form = useRef();
 
   const sendEmail = async (e) => {
     e.preventDefault();
     setLoading(true);
 
+    const serviceID = "service_buzoel9";
+    const templateID = "template_oai2qfh";
+    const publicKey = "sR6WVtXv2corXYgo3";
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      name: name,
+      email: email,
+      message: message,
+      reply_to: email,
+    };
+
     try {
-      await emailjs.sendForm('service_buzoel9', "template_oai2qfh", form.current, {
-        publicKey: "sR6WVtXv2corXYgo3",
-      });
+      const response = await emailjs.send(serviceID, templateID, templateParams, publicKey);
+      console.log("EmailJS Success:", response.status, response.text);
 
       setEmail("");
       setName("");
@@ -32,10 +43,10 @@ const ContactForm = () => {
         confirmButtonColor: "#00A797",
       });
     } catch (error) {
-      console.error("FAILED...", error);
+      console.error("EmailJS Error details:", error);
       Swal.fire({
         title: "Error de envío",
-        text: "Ocurrió un problema al enviar el correo. Puedes escribirme por WhatsApp.",
+        text: error?.text || "Ocurrió un problema al enviar el correo. Puedes escribirme por WhatsApp.",
         icon: "error",
         background: "#FFFFFF",
         color: "#0A192F",
@@ -53,12 +64,11 @@ const ContactForm = () => {
         <h3 className="text-lg font-display font-bold text-[#0A192F]">Enviar Mensaje por Gmail</h3>
       </div>
 
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">
+      <form onSubmit={sendEmail} className="flex flex-col gap-3">
         <div>
           <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Nombre Completo</label>
           <input
             type="text"
-            name="from_name"
             placeholder="Tu nombre o empresa"
             required
             className="w-full h-10 rounded-xl bg-slate-50 border border-slate-200 px-3 text-sm text-slate-800 focus:border-[#00A797] outline-none transition-colors placeholder:text-slate-400"
@@ -71,7 +81,6 @@ const ContactForm = () => {
           <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Correo Electrónico</label>
           <input
             type="email"
-            name="from_email"
             placeholder="tu@correo.com"
             required
             className="w-full h-10 rounded-xl bg-slate-50 border border-slate-200 px-3 text-sm text-slate-800 focus:border-[#00A797] outline-none transition-colors placeholder:text-slate-400"
@@ -83,7 +92,6 @@ const ContactForm = () => {
         <div>
           <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Mensaje Breve</label>
           <textarea
-            name="message"
             rows="3"
             placeholder="Detalles sobre el proyecto o vacante..."
             required
