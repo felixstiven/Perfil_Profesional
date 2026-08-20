@@ -13,7 +13,7 @@ import ChatWindow from "./components/agenteIa/chatWindow";
 
 function App() {
   return (
-    <main className="bg-[#F8FAFC] font-sans text-slate-800 relative overflow-hidden selection:bg-[#00A797] selection:text-white min-h-screen">
+    <main className=" font-sans text-slate-800 relative overflow-hidden selection:bg-[#00A797] selection:text-white min-h-screen">
       <NavbarMain />
       <HeroMain />
       <SubHeroMain />

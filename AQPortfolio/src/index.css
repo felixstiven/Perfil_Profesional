@@ -13,89 +13,11 @@
 }
 
 body {
-  background-color: #F8FAFC;
+  background-image: url(/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #1E293B;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-}
-
-h1, h2, h3, h4, .font-display {
-  font-family: 'Outfit', 'Space Grotesk', sans-serif;
-}
-
-.light-card {
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 10px 30px -10px rgba(0, 167, 151, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
-  border-radius: 1rem;
-  transition: all 0.3s ease;
-}
-
-.light-card:hover {
-  border-color: rgba(0, 167, 151, 0.35);
-  box-shadow: 0 20px 40px -15px rgba(0, 167, 151, 0.18), 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.text-gradient-teal {
-  background: linear-gradient(135deg, #0A192F 0%, #00A797 60%, #00C8C8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.btn-gosyt-primary {
-  background: #0A192F;
-  color: #FFFFFF;
-  font-weight: 600;
-  border-radius: 0.75rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(10, 25, 47, 0.15);
-}
-
-.btn-gosyt-primary:hover {
-  background: #00A797;
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 167, 151, 0.3);
-}
-
-.btn-gosyt-secondary {
-  background: #FFFFFF;
-  color: #0A192F;
-  border: 1px solid #CBD5E1;
-  font-weight: 600;
-  border-radius: 0.75rem;
-  transition: all 0.3s ease;
-}
-
-.btn-gosyt-secondary:hover {
-  border-color: #00A797;
-  color: #00A797;
-  background: #F1F5F9;
-}
-
-.modal-backdrop {
-  background: rgba(10, 25, 47, 0.6);
-  backdrop-filter: blur(8px);
-}
-
-* {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #F8FAFC;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #00A797;
 }

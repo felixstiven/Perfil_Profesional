@@ -20,7 +20,7 @@ const AboutMeMain = () => {
               Sobre Mí — Stiven Felix Alvis
             </h3>
             <p className="text-slate-600 text-sm mt-1 max-w-2xl">
-              Desarrollador Full Stack & Arquitecto de Sistemas enfocado en soluciones mantenibles, rendimiento en producción e integración de IA.
+              Desarrollador Full Stack & Aprendiz en Arquitectura de Software con enfoque en soluciones mantenibles, rendimiento en producción e integración de IA.
             </p>
           </div>
         </div>
@@ -58,8 +58,8 @@ const AboutMeMain = () => {
 
             <div className="space-y-4 text-slate-700 text-sm md:text-base leading-relaxed font-sans">
               <p>
-                Soy desarrollador Full Stack y tecnólogo en <strong>Análisis y Desarrollo de Software (SENA)</strong>, apasionado por la ingeniería rigurosa, las arquitecturas limpias y la optimización de procesos de software.
-              </p>
+                Soy desarrollador Full Stack  con aprendizaje y practica continua en DevOps, AI y Tecnologias Avanzadas,  tecnólogo en <strong>Análisis y Desarrollo de Software (SENA)</strong>, apasionado por la ingeniería rigurosa, las arquitecturas limpias y la optimización de procesos de software.
+              </p> 
 
               <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
                 <h4 className="font-bold text-[#0A192F] flex items-center gap-2 text-sm">
@@ -67,7 +67,7 @@ const AboutMeMain = () => {
                   Enfoque en GOSYT & Arquitectura Real-Time
                 </h4>
                 <p className="text-xs text-slate-600">
-                  Lidero el diseño e implementación de <strong>GOSYT</strong>, una plataforma síncrona en tiempo real utilizando WebSockets (Socket.io), Nginx como proxy inverso unificado, Docker en servidor de staging local (`La Torre`) y arquitectura de base de datos híbrida (PostgreSQL + MongoDB).
+                  Lidero el diseño e implementación de <strong>GOSYT</strong>, una plataforma síncrona en tiempo real utilizando WebSockets (Socket.io), Nginx como proxy inverso unificado, Docker en servidor de staging local (`La Torre Vieja que pude revivir  y darle un nuevo propocito`) y arquitectura de base de datos híbrida (PostgreSQL + MongoDB).
                 </p>
               </div>
 

@@ -13,7 +13,7 @@ const NavbarToggler = () => {
 
   return (
     <button
-      className="p-2.5 rounded-xl border border-slate-200 bg-slate-50 text-[#0A192F] hover:bg-slate-100 transition-colors cursor-pointer text-lg flex items-center justify-center"
+      className="p-2.5 rounded-xl border border-slate-300/65 bg-slate-400 text-[#353738] hover:bg-slate-300/90 transition-colors cursor-pointer text-lg flex items-center justify-center"
       onClick={setToggleMenu}
       aria-label="Toggle navigation menu"
     >
