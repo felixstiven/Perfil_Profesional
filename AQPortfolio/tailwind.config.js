@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -31,6 +32,15 @@ export default {
         card: "0 10px 30px -10px rgba(0, 167, 151, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05)",
         cardHover: "0 20px 40px -15px rgba(0, 167, 151, 0.2), 0 4px 6px rgba(0, 0, 0, 0.05)",
         soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+      },
+      keyframes:{
+        marquee:{
+          '0':{ transform: 'translateX(0%)'},
+          '100%': { transform: 'translateX(-50%)'},
+        },
+      },
+      animation: {
+        marquee: 'marquee 25s linear infinite',
       },
     },
   },

@@ -1,18 +1,33 @@
 const SubHeroMain = () => {
-  const highlights = [
-    { icon: "⚡", title: "Real-Time WebSockets" },
-    { icon: "🐳", title: "Docker & Hybrid Staging" },
-    { icon: "🚀", title: "Full Stack Architecture" },
-    { icon: "🏆", title: "Hackathon Master 2024 Winner" },
+  const techList = [
+    { name: 'JS / React',         icon: "/ReactJs.png" },
+    { name: 'Typescript',         icon: "/Typescript.png" },
+    { name: 'Express/WebSockets', icon: "/Express.png" },
+    { name: 'Servidor/BD',        icon: "/BD.png" },
+    { name: 'Arquitectura',       icon: "/Arquitectura.png" },
+    { name: 'SSH',                icon: "/SSH.png" },
+    { name: 'Linux',              icon: "/Linux.png" },
+    { name: 'Nginx',              icon: "/Nginx.png" },
+    { name: 'AI Agents',          icon: "/AgentesIA.png" },
+    { name: 'Docker',             icon: "/Docker.png" },
+
   ];
 
   return (
-    <div className="w-full border-y border-slate-200 bg-white py-5 px-4 shadow-sm">
-      <div className="max-w-[1200px] mx-auto flex flex-wrap justify-around items-center gap-6 text-slate-700 font-display">
-        {highlights.map((item, index) => (
-          <div key={index} className="flex items-center gap-2.5 hover:text-[#00A797] transition-colors">
-            <span className="text-xl">{item.icon}</span>
-            <span className="font-semibold text-sm md:text-base tracking-wide">{item.title}</span>
+    <div className="w-full overflow-hidden bg-gradient-to-tr from-[#040404] via-[#626565] to-slate-100 border-y border-slate-600/60 py-4 relative shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+      {/**Contenedor animado */}
+      <div className="flex w-max h-[120px] animate-marquee gap-5 hover:[animation-play-state:paused]">
+        {[...techList, ...techList].map((item, index) => (
+          <div key={index} className="flex  flex-col items-center justify-end h-[118px] w-[130px] shrink-0 group cursor-pointer">
+
+            <div className="flex flex-col items-center justify-center gap-1">
+              <img src={item.icon} alt={item.name} className="  h-[95px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(0,240,255,0.4)] "  />
+
+              <span className="text-cyan-400 text-xs font-semibold tracking-wider mt-1 text-center whitespace-nowrap">
+                {item.name}
+              </span>
+            </div>
+
           </div>
         ))}
       </div>

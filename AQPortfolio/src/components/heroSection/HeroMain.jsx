@@ -8,7 +8,7 @@ const HeroMain = () => {
         <HeroText />
         <HeroPic />
       </div>
-    </div>
+    </div> 
   );
 };
 
