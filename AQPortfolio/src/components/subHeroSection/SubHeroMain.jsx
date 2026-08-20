@@ -21,7 +21,7 @@ const SubHeroMain = () => {
           <div key={index} className="flex  flex-col items-center justify-end h-[118px] w-[130px] shrink-0 group cursor-pointer">
 
             <div className="flex flex-col items-center justify-center gap-1">
-              <img src={item.icon} alt={item.name} className="  h-[95px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(0,240,255,0.4)] "  />
+              <img src={item.icon} alt={item.name} className="  h-[150px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(0,240,255,0.4)] "  />
 
               <span className="text-cyan-400 text-xs font-semibold tracking-wider mt-1 text-center whitespace-nowrap">
                 {item.name}
