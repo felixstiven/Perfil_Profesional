@@ -46,7 +46,7 @@ const HeroText = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: false, amount: 0 }}
-            className="md:text-5xl lg:text-6xl sm:text-4xl font-display font-extrabold text-[#00F0FF] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]leading-tight"
+            className="md:text-5xl lg:text-6xl sm:text-4xl font-display font-extrabold text-brand-title drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]leading-tight"
           >
             Stiven Felix <span className="text-gradient-teal">Alvis</span>
           </motion.h1>
@@ -103,21 +103,20 @@ const HeroText = () => {
               Sobre Mí
             </Link>
 
-            <button className=" rounded-xl font-bold cursor-pointer bg-gradient-to-tr from-[#040404] via-[#626565] to-slate-100  overflow-hidden relative z-100   group px-8 py-2">
-              <span className="relative z-10 duration-500">
-                <a 
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center text-slate-100 text-sm gap-2"
-                > 
+            <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-xl font-bold cursor-pointer bg-card-gradient overflow-hidden relative z-100 group px-8 py-2 inline-flex items-center"
+            >
+                <span className="relative z-10 duration-500 flex items-center text-slate-100 text-sm gap-2">
                   <FaWhatsapp className="text-lg text-[#10B981]" />
                   WhatsApp
-                </a>
-              </span>
-              <span className="absolute w-full h-full bg-[#626565] -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500"></span>
-              <span className="absolute w-full h-full bg-gradient-to-tr from-[#040404] via-[#626565] to-slate-100 -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500"></span>
-            </button>
+                </span>
+                <span className="absolute w-full h-full bg-[#626565] -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500 pointer-events-none"></span>
+                <span className="absolute w-full h-full bg-card-gradient -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500 pointer-events-none"></span>
+            </a>
+ 
           </motion.div>
         </div>
       </motion.div>

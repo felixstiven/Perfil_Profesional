@@ -11,6 +11,9 @@ export default {
       "2xl": "1536px",
     },
     extend: {
+      backgroundImage: {
+        'card-gradient': 'linear-gradient(to top right, #040404, #626565, #f1f5f9)',
+      },
       colors: {
         brand: {
           bg: "#F8FAFC",
@@ -22,6 +25,8 @@ export default {
           muted: "#64748B",
           border: "#E2E8F0",
           accent: "#00A797",
+          live: "#56f2e2",
+          title: "#00F0FF",
         },
       },
       fontFamily: {
