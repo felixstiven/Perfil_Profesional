@@ -56,7 +56,7 @@ const skillCategories = [
 
 const SkillsMain = () => {
   return (
-    <section id="skills" className="max-w-[1200px] mx-auto my-24 px-4">
+    <section id="skills" className="w-full overflow-hidden relative mx-auto my-24 px-4">
       <motion.div
         variants={fadeIn("down", 0.2)}
         initial="hidden"
@@ -64,55 +64,56 @@ const SkillsMain = () => {
         viewport={{ once: false, amount: 0.3 }}
         className="text-center mb-12"
       >
-        <h2 className="text-4xl md:text-5xl font-display font-extrabold text-[#0A192F]">
+        <h2 className="text-4xl md:text-5xl font-display font-extrabold text-slate-50">
           Stack Técnico & <span className="text-gradient-teal">Arquitectura</span>
         </h2>
-        <p className="text-slate-600 text-sm md:text-base mt-2 max-w-xl mx-auto">
+        <p className="text-slate-100 text-sm md:text-base mt-2 max-w-xl mx-auto">
           Capacidades de ingeniería organizadas por módulos para construir aplicaciones escalables.
         </p>
       </motion.div>
 
-      {/* Bento Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {skillCategories.map((category, index) => (
-          <motion.div
-            key={index}
-            variants={fadeIn("up", 0.1 * (index + 1))}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: false, amount: 0.2 }}
-            className="light-card p-6 rounded-2xl flex flex-col justify-between"
-          >
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <div className="flex items-center gap-3 text-xl font-display font-bold text-[#0A192F]">
-                  <div className="p-2.5 rounded-xl bg-slate-100 border border-slate-200">
-                    {category.icon}
+      {/* Carrusel Infinito */}
+      <div className="flex w-max animate-marquee hover:[animation-play-state:paused] py-4">
+        {[0, 1].map((groupIndex) => (
+          <div key={groupIndex} className="flex shrink-0 gap-6 pr-6">
+            {skillCategories.map((category, index) => (
+              <div
+                key={`${groupIndex}-${index}`}
+                className="light-card w-[350px] md:w-[420px] shrink-0 p-6 rounded-2xl flex flex-col justify-between shadow-[0_0_15px_rgba(0,240,255,0.15)]"
+              >
+                <div>
+                  <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center gap-3 text-xl font-display font-bold text-slate-50">
+                      <div className="p-2.5 rounded-xl bg-slate-100 border border-slate-200">
+                        {category.icon}
+                      </div>
+                      <h3>{category.title}</h3>
+                    </div>
+
+                    <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-[#00A797]/30 text-[#00A797] border border-[#00A797]/20 font-semibold">
+                      {category.highlight}
+                    </span>
                   </div>
-                  <h3>{category.title}</h3>
+
+                  <p className="text-slate-100 text-sm mb-6 leading-relaxed">
+                    {category.description}
+                  </p>
+
+                  <div className="grid grid-cols-2 gap-3">
+                    {category.tags.map((tag, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs font-medium hover:border-[#00A797] transition-colors"
+                      >
+                        <span className="text-[#00A797] text-sm">{tag.icon}</span>
+                        <span>{tag.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-[#00A797]/10 text-[#00A797] border border-[#00A797]/20 font-semibold">
-                  {category.highlight}
-                </span>
               </div>
-
-              <p className="text-slate-600 text-sm mb-6 leading-relaxed">
-                {category.description}
-              </p>
-
-              <div className="grid grid-cols-2 gap-3">
-                {category.tags.map((tag, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-xs font-medium hover:border-[#00A797] transition-colors"
-                  >
-                    <span className="text-[#00A797] text-sm">{tag.icon}</span>
-                    <span>{tag.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
+            ))}
+          </div>
         ))}
       </div>
     </section>

@@ -12,7 +12,7 @@ const AboutMeMain = () => {
   return (
     <section id="about" className="max-w-[1200px] mx-auto my-16 px-4">
       {/* Light Card Banner */}
-      <div className="light-card bg-card-gradient p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="light-card p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_15px_rgba(0,240,255,0.15)]  ">
         <div className="flex items-center gap-5 text-center md:text-left">
           <div className="w-16 h-16 rounded-2xl bg-[#0A192F] text-[#00C8C8] flex items-center justify-center text-3xl font-bold shrink-0 mx-auto md:mx-0 shadow-md">
             SF

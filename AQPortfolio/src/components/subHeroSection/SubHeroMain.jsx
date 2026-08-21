@@ -14,20 +14,28 @@ const SubHeroMain = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden bg-gradient-to-tr from-[#040404] via-[#626565] to-slate-100 border-y border-slate-600/60 py-4 relative shadow-[0_0_15px_rgba(0,240,255,0.15)]">
-      {/**Contenedor animado */}
-      <div className="flex w-max h-[120px] animate-marquee gap-5 hover:[animation-play-state:paused]">
-        {[...techList, ...techList].map((item, index) => (
-          <div key={index} className="flex  flex-col items-center justify-end h-[118px] w-[130px] shrink-0 group cursor-pointer">
-
-            <div className="flex flex-col items-center justify-center gap-1">
-              <img src={item.icon} alt={item.name} className="  h-[150px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(0,240,255,0.4)] "  />
-
-              <span className="text-cyan-400 text-xs font-semibold tracking-wider mt-1 text-center whitespace-nowrap">
-                {item.name}
-              </span>
-            </div>
-
+    <div className="w-full overflow-hidden py-4 relative shadow-[0_0_15px_rgba(0,240,255,0.15)]">
+      {/* Contenedor animado */}
+      <div className="flex w-max h-[120px] animate-marquee hover:[animation-play-state:paused]">
+        {[0, 1].map((groupIndex) => (
+          <div key={groupIndex} className="flex shrink-0 gap-5 pr-5">
+            {techList.map((item, index) => (
+              <div
+                key={`${groupIndex}-${index}`}
+                className="flex flex-col items-center justify-end h-[118px] w-[130px] shrink-0 group cursor-pointer"
+              >
+                <div className="flex flex-col items-center justify-center gap-1">
+                  <img
+                    src={item.icon}
+                    alt={item.name}
+                    className="h-[150px] w-auto object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(0,240,255,0.4)]"
+                  />
+                  <span className="text-cyan-400 text-xs font-semibold tracking-wider mt-1 text-center whitespace-nowrap">
+                    {item.name}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         ))}
       </div>

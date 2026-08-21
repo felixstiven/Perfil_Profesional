@@ -15,12 +15,13 @@ const HeroText = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-tr from-[#040404] via-[#626565] to-slate-100  border border-slate-200 w-fit sm:mx-auto md:mx-0 shadow-sm"
+        className="inline-flex items-center bg-card-gradient gap-2 px-4 py-1.5 rounded-full   border border-slate-200 w-fit sm:mx-auto md:mx-0 shadow-sm"
       >
         <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-pulse"></span>
         <span className="text-xs font-mono font-semibold text-slate-300">
           Staging Server &apos;La Torre&apos; Active & Online
         </span>
+
       </motion.div>
 
       <motion.div
@@ -28,7 +29,7 @@ const HeroText = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className=" relative w-full p-6 bg-gradient-to-tr from-[#040404] via-[#626565] to-slate-100 backdrop-blur-md md:p-8 rounded-2xl border-2 border-slate-600/60 shadow-[inset_0_0_20px_rgba(0,0,0,0.8),0_0_15px_rgba(56,189,248,0.15)] flex flex-col gap-5 justify-center"
+        className=" relative w-full p-6  md:p-8 rounded-2xl  shadow-[0_0_15px_rgba(0,240,255,0.15)] flex flex-col gap-5 justify-center"
       >
         <div className="relative z-10 flex flex-col gap-5 hover:scale-105 transition-transform duration-500">
           <motion.h2

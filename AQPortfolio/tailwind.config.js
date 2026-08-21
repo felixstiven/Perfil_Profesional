@@ -38,14 +38,14 @@ export default {
         cardHover: "0 20px 40px -15px rgba(0, 167, 151, 0.2), 0 4px 6px rgba(0, 0, 0, 0.05)",
         soft: "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
       },
-      keyframes:{
-        marquee:{
-          '0':{ transform: 'translateX(0%)'},
-          '100%': { transform: 'translateX(-50%)'},
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
-        marquee: 'marquee 25s linear infinite',
+        marquee: 'marquee 20s linear infinite',
       },
     },
   },
