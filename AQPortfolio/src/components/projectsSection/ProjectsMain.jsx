@@ -4,14 +4,16 @@ import { fadeIn } from "../../framerMotion/variantsSwipe";
 
 const projects = [
   {
-    name: "GOSYT - Sistema de Órdenes & Tiempo Real",
-    category: "Proyecto Insignia - SaaS & Real-Time Architecture",
-    description: "Plataforma enterprise para la gestión de órdenes de trabajo, sincronización síncrona en tiempo real y arquitectura contenerizada.",
-    architecture: "Proxy inverso Nginx unificado, WebSockets bi-direccionales con Socket.io, base de datos híbrida (PostgreSQL + MongoDB 4.4.29 para hardware legacy) y despliegue en servidor físico 'La Torre' con Tailscale VPN.",
-    tags: ["Docker", "Socket.io", "Nginx", "PostgreSQL", "MongoDB", "Tailscale", "React"],
-    year: "2025 - En Producción / Staging",
+    name: "GOSYT - Gestión de Órdenes & Arquitectura Real-Time",
+    category: "Proyecto Insignia — Construcción Paso a Paso & Entorno Real",
+    description:
+      "Plataforma en desarrollo activo para la creación, seguimiento y gestión del ciclo de vida de órdenes de trabajo en tiempo real. No es una plantilla estática: se construye paso a paso para dominar cada flujo y arquitectura, aplicando metodologías de nivel empresarial (GitFlow con ramas main, develop y features, CI/CD) y aprendizaje asistido con IA para comprender la lógica profunda de cada módulo.",
+    architecture:
+      "Servidor de staging on-premise 'La Torre' (hardware rescatado y puesto en valor con Docker Compose y Tailscale VPN). Proxy inverso unificado con Nginx, eventos síncronos con Socket.io y base de datos dual (PostgreSQL para transacciones + MongoDB 4.4.29 optimizado para recursos).",
+    tags: ["Docker & Staging", "Socket.io", "Nginx", "GitFlow & CI/CD", "PostgreSQL", "MongoDB", "Tailscale", "React"],
+    year: "2025 - 2026 | Desarrollo Activo & Staging",
     image: "./images/gosyt.png",
-    link: "https://github.com/Proteccion-de-Ramas-Principales/GOSYT",
+    link: "https://gosyt.vercel.app/",
     isFeatured: true,
   },
   {
@@ -37,10 +39,10 @@ const ProjectsMain = () => {
         viewport={{ once: false, amount: 0.3 }}
         className="text-center mb-16"
       >
-        <h2 className="text-4xl md:text-5xl font-display font-extrabold text-[#0A192F]">
+        <h2 className="text-4xl md:text-5xl font-display font-extrabold text-[#ffff]">
           Casos de Estudio & <span className="text-gradient-teal">Proyectos</span>
         </h2>
-        <p className="text-slate-600 text-sm md:text-base mt-2 max-w-xl mx-auto">
+        <p className="text-slate-100 text-sm md:text-base mt-2 max-w-xl mx-auto">
           Demostración de decisiones de ingeniería, soluciones de arquitectura e implementación de código.
         </p>
       </motion.div>

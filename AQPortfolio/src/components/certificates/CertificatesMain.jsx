@@ -21,19 +21,19 @@ const CertificatesMain = () => {
   return (
     <section id="certificates" className="max-w-[1200px] mx-auto my-16 px-4">
       {/* Light Card Banner */}
-      <div className="light-card p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="light-card  p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_0_15px_rgba(0,240,255,0.15)]">
         <div className="flex items-center gap-5 text-center md:text-left">
           <div className="w-16 h-16 rounded-2xl bg-[#00A797]/10 text-[#00A797] flex items-center justify-center text-3xl shrink-0 mx-auto md:mx-0">
             <FaGraduationCap />
           </div>
           <div>
-            <div className="inline-block px-3 py-1 rounded-full bg-[#00A797]/10 text-[#00A797] text-xs font-mono font-semibold mb-1">
+            <div className="inline-block px-3 py-1 rounded-full bg-card-gradient text-brand-live text-xs font-mono font-semibold mb-1">
               Educación & Certificaciones (10 Cursos)
             </div>
-            <h3 className="text-2xl font-display font-bold text-[#0A192F]">
+            <h3 className="text-2xl font-display font-bold text-slate-50">
               Certificados de Especialización
             </h3>
-            <p className="text-slate-600 text-sm mt-1 max-w-2xl">
+            <p className="text-slate-100 text-sm mt-1 max-w-2xl">
               Acredita formación en UniAndes, SENA, Cisco Networking Academy, Coursera, Talento Tech e IA.
             </p>
           </div>
@@ -41,10 +41,15 @@ const CertificatesMain = () => {
 
         <button
           onClick={() => setIsOpen(true)}
-          className="btn-gosyt-primary px-6 py-3 rounded-xl text-sm flex items-center gap-2 shrink-0 cursor-pointer"
+          className="rounded-xl font-bold cursor-pointer bg-card-gradient overflow-hidden relative z-100 group px-8 py-2 inline-flex items-center"
         >
-          <FaGraduationCap />
-          <span>Ver Certificados (10)</span>
+          
+          <span className="flex gap-2 items-center relative z-10 duration-500 text-slate-100 text-sm">
+            <FaGraduationCap />
+            Ver Certificados (10)
+          </span>
+          <span className="absolute w-full h-full bg-[#626565] -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500 pointer-events-none "></span>
+          <span className="absolute w-full h-full bg-card-gradient -right-32 top-0 -rotate-45 group-hover:rotate-0  group-hover:right-0 duration-500  pointer-events-none "></span>
         </button>
       </div>
 

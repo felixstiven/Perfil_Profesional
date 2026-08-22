@@ -58,15 +58,15 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="light-card p-6 rounded-2xl border border-slate-200">
+    <div className="light-card p-6 rounded-2xl shadow-[0_0_15px_rgba(0,240,255,0.15)]">
       <div className="flex items-center gap-2 mb-4 text-[#00A797]">
         <FiSend className="text-xl" />
-        <h3 className="text-lg font-display font-bold text-[#0A192F]">Enviar Mensaje por Gmail</h3>
+        <h3 className="text-lg font-display font-bold text-slate-50">Enviar Mensaje por Gmail</h3>
       </div>
 
       <form onSubmit={sendEmail} className="flex flex-col gap-3">
         <div>
-          <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Nombre Completo</label>
+          <label className="text-xs font-mono text-slate-200 mb-1 block font-medium">Nombre Completo</label>
           <input
             type="text"
             placeholder="Tu nombre o empresa"
@@ -78,7 +78,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Correo Electrónico</label>
+          <label className="text-xs font-mono text-slate-200 mb-1 block font-medium">Correo Electrónico</label>
           <input
             type="email"
             placeholder="tu@correo.com"
@@ -90,7 +90,7 @@ const ContactForm = () => {
         </div>
 
         <div>
-          <label className="text-xs font-mono text-slate-500 mb-1 block font-medium">Mensaje Breve</label>
+          <label className="text-xs font-mono text-slate-200 mb-1 block font-medium">Mensaje Breve</label>
           <textarea
             rows="3"
             placeholder="Detalles sobre el proyecto o vacante..."
@@ -104,7 +104,7 @@ const ContactForm = () => {
         <button
           type="submit"
           disabled={loading}
-          className="btn-gosyt-primary w-full rounded-xl py-2.5 font-bold text-sm flex items-center justify-center gap-2 mt-1 cursor-pointer disabled:opacity-50"
+          className="btn-gosyt-primary bg-brand-accent w-full rounded-xl py-2.5 font-bold text-sm flex items-center justify-center gap-2 mt-1 cursor-pointer disabled:opacity-50 hover:bg-brand-accent/80"
         >
           {loading ? "Enviando..." : "Enviar Correo Directo"}
         </button>

@@ -1,31 +1,33 @@
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variantsSwipe";
 import { FaExternalLinkAlt, FaCogs } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
-const SingleProject = ({ project }) => {
+
+
+const SingleProject = ( {project} ) => {
+  console.log(project);
   return (
     <motion.div
       variants={fadeIn("up", 0.2)}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.2 }}
-      className={`light-card rounded-2xl border p-6 md:p-8 flex flex-col lg:flex-row gap-8 items-center ${
-        project.isFeatured ? "border-[#00A797]/40 shadow-lg" : "border-slate-200"
-      }`}
+      className={`light-card rounded-2xl  p-6 md:p-8 flex flex-col lg:flex-row gap-8 items-center shadow-[0_0_15px_rgba(0,240,255,0.15)] `}
     >
       <div className="flex-1 space-y-4">
         <div className="flex flex-wrap items-center gap-3">
-          <span className="px-3 py-1 rounded-full bg-[#00A797]/10 text-[#00A797] text-xs font-mono font-semibold">
+          <span className="px-3 py-1 rounded-full bg-card-gradient text-brand-live text-xs font-mono font-semibold">
             {project.category}
           </span>
-          <span className="text-xs font-mono text-slate-500">{project.year}</span>
+          <span className="text-xs font-mono text-slate-100">{project.year}</span>
         </div>
 
-        <h3 className="text-2xl md:text-3xl font-display font-bold text-[#0A192F]">
+        <h3 className="text-2xl md:text-3xl font-display font-bold text-slate-50">
           {project.name}
         </h3>
 
-        <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+        <p className="text-slate-100 text-sm md:text-base leading-relaxed">
           {project.description}
         </p>
 
@@ -55,7 +57,7 @@ const SingleProject = ({ project }) => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-gosyt-primary px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 cursor-pointer"
+            className="btn-gosyt-primary bg-brand-accent px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 hover:bg-brand-accent/80 cursor-pointer"
           >
             <span>Ver Proyecto</span>
             <FaExternalLinkAlt className="text-xs" />
@@ -93,5 +95,19 @@ const SingleProject = ({ project }) => {
     </motion.div>
   );
 };
+
+SingleProject.propTypes = {
+  project: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    architecture: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    year: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isFeatured: PropTypes.bool.isRequired,
+  }).isRequired,
+}
 
 export default SingleProject;
